@@ -4,12 +4,15 @@ import argparse
 
 def parser_func():
   parser = argparse.ArgumentParser(description='PDF reconstructor')
-  parser.add_argument('--outname', '-o', default='out.pdf',help='Output file name')
-  #parser.add_argument('--dir', help='Directory')
+  parser.add_argument('--outname', '-o', default='out.pdf', help='Output file name')
+  parser.add_argument('--dir', default='', help='Directory with pdfs')
   return parser
 
-def pdf_processor(filename, pdfs):
-  script_dir = os.path.dirname(__file__)
+def pdf_processor(filename, pdfs, path=""):
+  if path == "":
+    script_dir = os.path.dirname(__file__)
+  else:
+    script_dir = path
   output = PdfFileWriter()
   for pdf in pdfs:
     abs_file_path = os.path.join(script_dir, pdf)
@@ -32,7 +35,7 @@ def main():
   for file in os.listdir(args.dir):
     if file.endswith(".pdf"):
 	  pdfs.append(file)
-  pdf_processor(output_file, pdfs)  
+  pdf_processor(output_file, pdfs, args.dir)  
   
 if __name__ == '__main__':
   main()
