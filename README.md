@@ -8,6 +8,7 @@ PyPDF2: https://github.com/mstamy2/PyPDF2
 
 # How to use
 Linux: `python pdf.py --outname [output file name]`
+
 Windows: `C:\python27\python.exe [path to pdf.py] --outname [output file name]`
 
 
