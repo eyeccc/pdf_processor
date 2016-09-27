@@ -22,7 +22,7 @@ def pdf_processor(filename, pdfs, path=""):
       output.addPage(p)
   outfullpath = os.path.join(script_dir, filename)
   with open(outfullpath, 'wb') as f:
-   output.write(f)
+    output.write(f)
 
 def main():
   parser = parser_func()
