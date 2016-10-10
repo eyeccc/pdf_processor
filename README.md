@@ -7,8 +7,10 @@ Sometimes we just want to read the abstract of a bunch of papers. This program h
 PyPDF2: https://github.com/mstamy2/PyPDF2
 
 # How to use
-Linux: `python pdf.py --outname [output file name] --dir [input file directory]`
+Linux: 
+```python pdf.py --outname [output file name] --dir [input file directory]```
 
-Windows: `C:\python27\python.exe [path to pdf.py] --outname [output file name] --dir [input file directory full path]`
+Windows:
+```C:\python27\python.exe [path to pdf.py] --outname [output file name] --dir [input file directory full path]```
 
 
